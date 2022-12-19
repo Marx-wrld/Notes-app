@@ -5,6 +5,7 @@ import { NewNote } from "./NewNote"
 import { useLocalStorage } from "./useLocalStorage"
 import { useMemo } from "react"
 import { v4 as uuidV4 } from "uuid"
+import { NoteList } from "./NoteList"
 
 export type Note = {
   id: string
@@ -55,7 +56,7 @@ function App() {
   return (
   <Container className="my-4">{/*for margin top and bottom*/}
   <Routes>
-    <Route path="/" element={<h1>Home</h1>}></Route>
+    <Route path="/" element={<NoteList availableTags={tags}/>}></Route> {/*rendering out a note list*/}
     <Route path="/new" element={<NewNote onSubmit={onCreateNote} onAddTag = {addTag} availableTags={tags}/>}></Route>
     <Route path="/:id">
       <Route index element={<h1>Show</h1>}></Route>

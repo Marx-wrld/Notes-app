@@ -1,3 +1,4 @@
+*
 .card{
     transition: translate ease-in 100ms, box-shadow ease-in-out 100ms;
 }

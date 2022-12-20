@@ -5,6 +5,7 @@ import ReactSelect from "react-select"
 import { Tag } from "./App"
 import styles from "./NoteList.module.css"
 
+
 type SimplifiedNote = {
     tags: Tag[]
     title: string

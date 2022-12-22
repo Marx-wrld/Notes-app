@@ -42,7 +42,7 @@ export function NoteList({availableTags, notes, onUpdateTag, onDeleteTag,}: Note
     return (
     <>
     <Row className="align-items-center mb-4">{/*will be for our title as well as the two buttons (create and edit tags)*/}
-        <Col><h1>Notes</h1></Col>
+        <Col><h1>Notes App</h1></Col>
         <Col xs="auto"> {/*will force our column to be as small as possible to fit all of our content*/}
             <Stack gap={2} direction="horizontal">
                 <Link to="/new">
@@ -105,7 +105,7 @@ function NoteCard({
     <Card 
     as={Link} 
     to={`/${id}`} 
-    className={'h-100 text-reset text-decoration-none ${styles.card}'}>
+    className={`h-100 text-reset text-decoration-none ${styles.card}`}>
     <Card.Body>
         <Stack gap={2} className="align-items-center justify-content-center h-100">
             <span className="fs-5">

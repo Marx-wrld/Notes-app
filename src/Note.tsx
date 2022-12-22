@@ -16,7 +16,7 @@ export function Note({ onDelete}: NoteProps){
     <>
         <Row className="align-items-center mb-4">
             <Col>
-                <h1>{note.title}</h1>
+                <h3>{note.title}</h3>
                 {note.tags.length > 0 && (
                 <Stack 
                 gap={1} 
@@ -32,7 +32,7 @@ export function Note({ onDelete}: NoteProps){
             </Col>
             <Col xs="auto"> 
             <Stack gap={2} direction="horizontal">
-                <Link to={'/${note.id}/edit'}>
+                <Link to={`/${note.id}/edit`}>
                     <Button variant="primary">Edit</Button>
                 </Link>
                 <Button onClick={() => {
